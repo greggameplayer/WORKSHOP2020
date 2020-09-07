@@ -10,16 +10,18 @@ function getMainController()
     if (isset($_GET['page'])) {
         switch ($_GET['page']) {
             default:
+                echo \Helpers\getRenderer()->render("homepage.html");
                 break;
         }
     } else if (isset($_POST["page"])) {
         switch ($_POST["page"]) {
             default:
+                echo \Helpers\getRenderer()->render("homepage.html");
                 break;
         }
 
-    } /*else {
-        // homepage
+    } else {
+        echo \Helpers\getRenderer()->render("homepage.html");
 
-    }*/
+    }
 }
