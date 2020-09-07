@@ -1,0 +1,15 @@
+{
+    "name": "greggameplayer/workshop2020",
+    "description": "Project workshop 2020 requested by my school",
+    "type": "project",
+    "require": {
+        "twig/twig": "^3.0"
+    },
+    "license": "GPL-3.0 License",
+    "authors": [
+        {
+            "name": "Grégoire Hage",
+            "email": "gregoire.hage@gmail.com"
+        }
+    ]
+}
