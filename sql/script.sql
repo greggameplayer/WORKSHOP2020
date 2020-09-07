@@ -4,14 +4,14 @@ CREATE TABLE utilisateur(
    id INT PRIMARY KEY  AUTO_INCREMENT,
    email VARCHAR(50),
    password VARCHAR(50)
-) ENGINE=INNODB;
+)ENGINE=INNODB;
 
 CREATE TABLE produit(
    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
    nom VARCHAR(50),
-   consomation DECIMAL(15,2),
+   consommation DECIMAL(15,2),
    utilisationHebdo INT 
-) ENGINE=INNODB;
+)ENGINE=INNODB;
 
 CREATE TABLE possession (
     idUtilisateur INT,
@@ -20,7 +20,7 @@ CREATE TABLE possession (
     PRIMARY KEY(idUtilisateur, idProduit),
     FOREIGN KEY(idUtilisateur) REFERENCES utilisateur(id),
     FOREIGN KEY(idProduit) REFERENCES produit(id)
-) ENGINE=INNODB;
+)ENGINE=INNODB;
 
 INSERT INTO produit (nom, consomation, utilisationHebdo)
 VALUES
