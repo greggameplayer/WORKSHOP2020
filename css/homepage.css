@@ -149,6 +149,14 @@ a:hover {
     color: #f44336;
 }
 
+.btn-color {
+    background-color: #f44336;
+}
+
+.btn-color:hover {
+    background-color: #f44350;
+}
+
 .page-title h1 {
     position: relative;
     padding-bottom: 30px;

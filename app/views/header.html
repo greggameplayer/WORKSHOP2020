@@ -32,6 +32,56 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contactez-nous</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connexion/Inscription <i class="ti-user mr-3"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown06">
+                            <li>
+                                <form id="dropdownformheader" class="px-4 py-3 dditems" method="post">
+                                    <div class="form-group dditems">
+                                        {% if Failed is defined and Failed == "mdp" %}
+                                        <div class='invalid-feedback'>
+                                            Le mot de passe est éronné !
+                                        </div>
+                                        {% elseif Failed is defined and Failed == "user" %}
+                                        <div class='invalid-feedback'>
+                                            L'utilisateur auquel vous tentez de vous connecter n'existe pas !
+                                        </div>
+                                        {% elseif Failed is defined and Failed == "captchaError" %}
+                                        <div class='invalid-feedback'>
+                                            Erreur lors de la complétion du captcha !
+                                        </div>
+                                        {% elseif Failed is defined and Failed == "botDetected" %}
+                                        <div class='invalid-feedback'>
+                                            Vous êtes un bot !
+                                        </div>
+                                        {% elseif Tokentest == 0  and Tokentest is defined %}
+                                        <div class='invalid-feedback'>
+                                            Veuillez activer votre compte via l'email envoyé
+                                        </div>
+                                        {% endif %}
+                                        <label for="emaillogin" class="dditems text-white">Adresse email</label>
+                                        <input type="email" class="form-control dditems" id="emaillogin" name="emaillogin" placeholder="email@example.com" required>
+                                    </div>
+                                    <div class="form-group dditems">
+                                        <label for="passwordlogin" class="dditems text-white">Mot de passe</label>
+                                        <input type="password" class="form-control dditems" id="passwordlogin" name="passwordlogin" placeholder="" required>
+                                    </div>
+                                    <div class="form-group dditems">
+                                        <div class="form-check dditems">
+                                            <input type="checkbox" class="form-check-input dditems text-white" id="dropdownCheck">
+                                            <label class="form-check-label dditems text-white" for="dropdownCheck">
+                                                Se souvenir de moi
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-color dditems" name="submitlogin" id="submitloginbutton" value="Se connecter">
+                                </form>
+                                <div class="dropdown-divider dditems"></div>
+                                <a class="dropdown-item dditems text-white" id="inscriptionbutton" href="#">Vous n'êtes pas inscrit ? cliquez-ici</a>
+                                <a class="dropdown-item dditems text-white" href="#">Mot de passe oublié ?</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
