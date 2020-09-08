@@ -2,7 +2,6 @@
 namespace Controllers;
 
 use function Helpers\getRenderer;
-use function Models\getAllNotifs;
 
 
 function getMainController()
@@ -13,7 +12,14 @@ function getMainController()
                 getInscriptionController();
                 break;
             case 'questionnaire':
-                echo getRenderer()->render('questionnaire.html');
+                if(isset($_SESSION["id"])) {
+                    echo \Helpers\getRenderer()->render("questionnaire.html", ["Session" => $_SESSION["id"]]);
+                } else {
+                    echo \Helpers\getRenderer()->render("questionnaire.html");
+                }
+                break;
+            case 'contact':
+                echo \Helpers\getRenderer()->render("contact.html");
                 break;
             default:
                 getHomepageController();

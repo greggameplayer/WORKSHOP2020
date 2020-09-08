@@ -11,7 +11,7 @@
 
             <div class="collapse navbar-collapse" id="navbarsExample09">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item  active"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item  active"><a class="nav-link" href="?page=">Accueil</a></li>
 
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
@@ -31,7 +31,18 @@
                             <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contactez-nous</a></li>
+                    <li class="nav-item"><a class="nav-link" href="?page=contact">Contactez-nous</a></li>
+                    {% if Session is defined %}
+                    <li class="nav-item dropdown dditemsprofile" id="profilebutton">
+                        <a class="nav-link dropdown-toggle dditemsprofile" id="dropdownprofile" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> Profil</a>
+                        <div class="dropdown-menu dditemsprofile" id="dropdownprofilemenu">
+                            <a class="dropdown-item dditemsprofile" id="paramsb" href="?page=settings"><i class="fas fa-tools"></i> Paramètres</a>
+                            <a class="dropdown-item dditemsprofile" id="myaccountbt" href="#"><i class="fas fa-user-circle"></i> Mon compte</a>
+                            <a class="dropdown-item dditemsprofile" id="discussbt" href="#"><i class="fas fa-comments"></i> Mes discussions</a>
+                            <a class="dropdown-item dditemsprofile" id="deconnexionbt" href="#"><i class="fas fa-user-slash"></i> Se déconnecter</a>
+                        </div>
+                    </li>
+                    {% else %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connexion/Inscription <i class="ti-user mr-3"></i></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown06">
@@ -45,18 +56,6 @@
                                         {% elseif Failed is defined and Failed == "user" %}
                                         <div class='invalid-feedback'>
                                             L'utilisateur auquel vous tentez de vous connecter n'existe pas !
-                                        </div>
-                                        {% elseif Failed is defined and Failed == "captchaError" %}
-                                        <div class='invalid-feedback'>
-                                            Erreur lors de la complétion du captcha !
-                                        </div>
-                                        {% elseif Failed is defined and Failed == "botDetected" %}
-                                        <div class='invalid-feedback'>
-                                            Vous êtes un bot !
-                                        </div>
-                                        {% elseif Tokentest == 0  and Tokentest is defined %}
-                                        <div class='invalid-feedback'>
-                                            Veuillez activer votre compte via l'email envoyé
                                         </div>
                                         {% endif %}
                                         <label for="emaillogin" class="dditems text-white">Adresse email</label>
@@ -82,6 +81,7 @@
                             </li>
                         </ul>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

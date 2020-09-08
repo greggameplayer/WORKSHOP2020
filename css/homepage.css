@@ -146,7 +146,7 @@ a:hover {
 }
 
 .text-color {
-    color: #f44336;
+    color: #5ABD7F;
 }
 
 .btn-color {
@@ -815,6 +815,11 @@ textarea.form-control {
 
 .footer-widget a:hover {
     color: #f44336;
+}
+
+.invalid-feedback
+{
+    display: block;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
