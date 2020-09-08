@@ -15,11 +15,12 @@ function getMainController()
         }
     } else if (isset($_POST["page"])) {
         switch ($_POST["page"]) {
+            case 'questionnaire':
+                echo \Helpers\getRenderer()->render("questionnaire.html");
+                break;
             default:
                 echo \Helpers\getRenderer()->render("homepage.html");
                 break;
-        }
-
     } else {
         echo \Helpers\getRenderer()->render("homepage.html");
 
