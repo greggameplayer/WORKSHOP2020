@@ -2,7 +2,6 @@
 namespace Controllers;
 
 use function Helpers\getRenderer;
-use function Models\getAllNotifs;
 
 
 function getMainController()
@@ -11,6 +10,13 @@ function getMainController()
         switch ($_GET['page']) {
             case 'inscription':
                 getInscriptionController();
+                break;
+            case 'questionnaire':
+                if(isset($_SESSION["id"])) {
+                    echo \Helpers\getRenderer()->render("questionnaire.html", ["Session" => $_SESSION["id"]]);
+                } else {
+                    echo \Helpers\getRenderer()->render("questionnaire.html");
+                }
                 break;
             case 'contact':
                 echo \Helpers\getRenderer()->render("contact.html");
@@ -21,9 +27,6 @@ function getMainController()
         }
     } else if (isset($_POST["page"])) {
         switch ($_POST["page"]) {
-            case 'questionnaire':
-                echo \Helpers\getRenderer()->render("questionnaire.html");
-                break;
             case "inscription.model":
                 \Models\setUser($_POST["Email"], $_POST["Password"]);
                 break;
