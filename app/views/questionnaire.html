@@ -2,8 +2,9 @@
 {% block title %} questionnaire {% endblock %}
 
 {% block body %}
-        <link rel="stylesheet" href="css/"/>
-<link href="css/homepage.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/..."/>
+        <link href="css/homepage.css" rel="stylesheet">
+        <script src="js/questionnaire.js" defer></script>
     <body>
 <!--
         <div class="allwrapper">
@@ -51,8 +52,8 @@
                     <div id="afficheur2"></div>
                     <div id="afficheur3"></div>
             </form>
-        -->
         </div>
+        -->
         <form action="?page=questionnaire" class="radiogroup" method="POST">
             <div class="text">Entrez les appareils présent chez vous, avec leurs spécificités:</div>
             <div class="main">
@@ -64,7 +65,7 @@
                     <input type="checkbox" class="firstChose" id="Réfrigérateur" name="Réfrigérateur">
                     <label for="Réfrigérateur">Réfrigérateur</label>
                 </div>
-                <div id="main--Sèche-linge"></div>
+                <div id="main--Sèche-linge">
                     <input type="checkbox" class="firstChose" id="Sèche-linge" name="Sèche-linge">
                     <label for="Sèche-linge">Sèche-linge</label>
                 </div>
@@ -72,41 +73,41 @@
                     <input type="checkbox" class="firstChose" id="Lave-vaisselle" name="Lave-vaisselle">
                     <label for="Lave-vaisselle">Lave-vaisselle</label>
                 </div>
-                <div id="main--Lave-vaisselle">
+                <div id="main--Lave-linge">
                     <input type="checkbox" class="firstChose" id="Lave-linge" name="Lave-linge">
                     <label for="Lave-linge">Lave-linge</label>
                 </div>
-                <div id="main--Télévision LCD">
-                    <input type="checkbox" class="firstChose" id="Télévision LCD" name="Télévision LCD">
+                <div id="main--Télévision_LCD">
+                    <input type="checkbox" class="firstChose" id="Télévision_LCD" name="Télévision_LCD">
                     <label for="Télévision LCD">Télévision LCD</label>
                 </div>
                 <div id="main--Aspirateur">
                     <input type="checkbox" class="firstChose" id="Aspirateur" name="Aspirateur">
                     <label for="Aspirateur">Aspirateur</label>
                 </div>
-                <div id="main--Chargeur de téléphone">
-                    <input type="checkbox" class="firstChose" id="Chargeur de téléphone" name="Chargeur de téléphone">
-                    <label for="Chargeur de téléphone">Chargeur de téléphone</label>
+                <div id="main--Chargeur_de_téléphone">
+                    <input type="checkbox" class="firstChose" id="Chargeur_de_téléphone" name="Chargeur_de_téléphone">
+                    <label for="Chargeur_de_téléphone">Chargeur de téléphone</label>
                 </div>
-                <div id="main--Four micro-ondes"></div>
+                <div id="main--Ordinateur">
                     <input type="checkbox" class="firstChose" id="Ordinateur" name="Ordinateur">
                     <label for="Ordinateur">Ordinateur</label>
                 </div>
-                <div id="main--Four micro-ondes">
-                    <input type="checkbox" class="firstChose" id="Four micro-ondes" name="Four micro-ondes">
-                    <label for="Four micro-ondes">Four micro-ondes</label>
+                <div id="main--Four_micro-ondes">
+                    <input type="checkbox" class="firstChose" id="Four_micro-ondes" name="Four_micro-ondes">
+                    <label for="Four_micro-ondes">Four micro-ondes</label>
                 </div>
-                <div id="main--Four classique">
-                    <input type="checkbox" class="firstChose" id="Four classique" name="Four classique">
-                    <label for="Four classique">Four classique</label>
+                <div id="main--Four_classique">
+                    <input type="checkbox" class="firstChose" id="Four_classique" name="Four_classique">
+                    <label for="Four_classique">Four classique</label>
+                </div>    
                 <div id="main--Ampoules">
-                </div>
                     <input type="checkbox" class="firstChose" id="Ampoules" name="Ampoules">
                     <label for="Ampoules">Ampoules</label>
-                </div>
-                <div id="main--Ampoules basses consommations">
-                    <input type="checkbox" class="firstChose" id="Ampoules basses consommations" name="Ampoules basses consommations">
-                    <label for="Ampoules basses consommations">Ampoules basses consommations</label>
+                </div>    
+                <div id="main--Ampoules_basses_consommations">
+                    <input type="checkbox" class="firstChose" id="Ampoules_basses_consommations" name="Ampoules_basses_consommations">
+                    <label for="Ampoules_basses_consommations">Ampoules basses consommations</label>
                 </div>
             </div>
         </form>
