@@ -1,9 +1,11 @@
-CREATE DATABASE workshop 
+CREATE DATABASE workshop;
+
+USE workshop;
 
 CREATE TABLE utilisateur(
    id INT PRIMARY KEY  AUTO_INCREMENT,
    email VARCHAR(50),
-   password VARCHAR(50)
+   password VARCHAR(500)
 )ENGINE=INNODB;
 
 CREATE TABLE categorie(
@@ -32,7 +34,7 @@ CREATE TABLE possession (
     FOREIGN KEY(idCategorie) REFERENCES categorie(id)
 )ENGINE=INNODB;
 
-INSERT INTO produit (nom, consomation, utilisationHebdo)
+INSERT INTO categorie (nom, consommation, utilisationHebdo)
 VALUES
 ('Congélateur', 350, 168),
 ('Réfrigérateur', 200, 168),
@@ -46,10 +48,22 @@ VALUES
 ('Four micro-ondes', 40, 1),
 ('Four classique', 365, 4),
 ('Ampoules', 110, 5),
-('Ampoules basses consoles', 22, 5);
+('Ampoules basses consommation', 22, 5);
 
-insert into utilisateur (email, password)
+INSERT INTO utilisateur (email, password)
 VALUES
 ('victormarit.95@gmail.com', '$2y$10$zaNn9Uz09ve.UHZ4X0NKCuSg0OsPa1R4TllBuYsMcQwia1CRldgua');
+
+
+
+INSERT INTO produitAlternative(nom, consommation, utilisationHebdomadaire, idCategorie)
+VALUES 
+('Congélateur armoire Bosch GSV33VWEV', 204, 168, 1),
+('WHIRLPOOL W7821OOX',204,168,2),
+(' ELECTROLUX EW7H4802SC', 309, 12, 3),
+('Essentielb ELV-442b', 262, 12, 4),
+('',,,5),
+();
+
 
 
