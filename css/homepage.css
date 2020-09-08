@@ -150,11 +150,11 @@ a:hover {
 }
 
 .btn-color {
-    background-color: #f44336;
+    background-color: #5ABD7F;
 }
 
 .btn-color:hover {
-    background-color: #f44350;
+    background-color: #5ABD7F;
 }
 
 .page-title h1 {
@@ -371,7 +371,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 }
 
 .portfolio .btn-group .btn:hover {
-    color: #f44336;
+    color: #5ABD7F;
 }
 
 .portfolio .btn-group:not(:first-child) > .btn, .portfolio .btn-group > .btn:not(:first-child) {
@@ -380,7 +380,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
 }
 
 .portfolio .btn.active {
-    color: #f44336;
+    color: #5ABD7F;
 }
 
 .inner-box {
