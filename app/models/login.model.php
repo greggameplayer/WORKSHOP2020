@@ -20,9 +20,13 @@ function getUser($Email, $Password){
                 $_SESSION["failed"] = false;
                 $_SESSION["attempts"] = 0;
                 $_SESSION["id"] = $donnees["id"];
+                \Controllers\getHomepageController();
+                return;
                 } else {
                     $_SESSION["failed"] = "mdp";
                     $_SESSION["attempts"] += 1;
+                    \Controllers\getHomepageController();
+                    return;
                 }
             }
             $qcheckpassword->closeCursor();
