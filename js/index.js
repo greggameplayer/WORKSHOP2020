@@ -15,7 +15,6 @@ function onSubmitConnexion(event){
     }, function (results) {
         $("body").html(results);
         $("#deconnexionbt").on("click", onClickDeconnexion);
-        document.title = "Accueil / ElectroRepair";
     });
 }
 
@@ -29,7 +28,6 @@ function onClickDeconnexion(_event){
 function onClickInscriptionButton(_event){
     $.post("./index.php", {page: "inscription"}, function (results){
         $("body").html(results);
-        document.title = "Inscription / ElectroRepair";
     });
 }
 
@@ -37,6 +35,15 @@ function onSubmitInscriptionForm(event){
     event.preventDefault();
     $.post("./index.php", {page: "inscription.model", Email: $("#usernameinscription").val(), Password: $("#passwordinscription").val()}, function(results){
         $("#submitinscription").prop("disabled", true);
+        $.post("./index.php", {
+            page: "connexion",
+            Email: $("#usernameinscription").val(),
+            Password: $("#passwordinscription").val()
+        }, function (results) {
+            $("body").html(results);
+            $("#deconnexionbt").on("click", onClickDeconnexion);
+            window.location.replace("./?page=questionnaire");
+        });
     });
 }
 
