@@ -6,20 +6,30 @@ CREATE TABLE utilisateur(
    password VARCHAR(50)
 )ENGINE=INNODB;
 
-CREATE TABLE produit(
+CREATE TABLE categorie(
    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
    nom VARCHAR(50),
    consommation DECIMAL(15,2),
    utilisationHebdo INT 
 )ENGINE=INNODB;
 
+CREATE TABLE produitAlternative(
+   id INT,
+   nom VARCHAR(50) NOT NULL UNIQUE,
+   consommation INT,
+   utilisationHebdomadaire INT,
+   idCategorie INT NOT NULL,
+   PRIMARY KEY(id),
+   FOREIGN KEY(idCategorie) REFERENCES categorie(id)
+);
+
 CREATE TABLE possession (
     idUtilisateur INT,
-    idProduit INT,
+    idCategorie INT,
     score DECIMAL(15, 2),
     PRIMARY KEY(idUtilisateur, idProduit),
     FOREIGN KEY(idUtilisateur) REFERENCES utilisateur(id),
-    FOREIGN KEY(idProduit) REFERENCES produit(id)
+    FOREIGN KEY(idCategorie) REFERENCES categorie(id)
 )ENGINE=INNODB;
 
 INSERT INTO produit (nom, consomation, utilisationHebdo)
