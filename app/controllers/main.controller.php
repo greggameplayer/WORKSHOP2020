@@ -12,15 +12,15 @@ function getMainController()
             case 'inscription':
                 getInscriptionController();
                 break;
+            case 'questionnaire':
+                echo getRenderer()->render('questionnaire.html');
+                break;
             default:
                 getHomepageController();
                 break;
         }
     } else if (isset($_POST["page"])) {
         switch ($_POST["page"]) {
-            case 'questionnaire':
-                echo \Helpers\getRenderer()->render("questionnaire.html");
-                break;
             case "inscription.model":
                 \Models\setUser($_POST["Email"], $_POST["Password"]);
                 break;
