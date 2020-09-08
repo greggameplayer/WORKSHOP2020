@@ -128,7 +128,7 @@ a {
 }
 
 a:hover {
-    color: #f44336;
+    color: green;
     text-decoration: none;
     outline: none;
 }
@@ -239,7 +239,7 @@ ul.dropdown-menu > li > a, .navbar ul ul ul.dropdown-menu li .nav-link {
 }
 
 ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hover {
-    color: #f44336;
+    color: green;
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
@@ -814,7 +814,7 @@ textarea.form-control {
 }
 
 .footer-widget a:hover {
-    color: #f44336;
+    color: #22844e;
 }
 
 .invalid-feedback
