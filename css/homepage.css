@@ -817,4 +817,9 @@ textarea.form-control {
     color: #f44336;
 }
 
+.invalid-feedback
+{
+    display: block;
+}
+
 /*# sourceMappingURL=maps/style.css.map */
