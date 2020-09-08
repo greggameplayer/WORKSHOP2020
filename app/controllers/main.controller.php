@@ -12,6 +12,9 @@ function getMainController()
             case 'inscription':
                 getInscriptionController();
                 break;
+            case 'contact':
+                echo \Helpers\getRenderer()->render("contact.html");
+                break;
             default:
                 getHomepageController();
                 break;
