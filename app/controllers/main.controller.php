@@ -9,8 +9,11 @@ function getMainController()
 {
     if (isset($_GET['page'])) {
         switch ($_GET['page']) {
+            case 'inscription':
+                getInscriptionController();
+                break;
             default:
-                echo \Helpers\getRenderer()->render("homepage.html");
+                getHomepageController();
                 break;
         }
     } else if (isset($_POST["page"])) {
@@ -18,11 +21,23 @@ function getMainController()
             case 'questionnaire':
                 echo \Helpers\getRenderer()->render("questionnaire.html");
                 break;
+            case "inscription.model":
+                \Models\setUser($_POST["Email"], $_POST["Password"]);
+                break;
+            case "inscription":
+                getInscriptionController();
+                break;
+            case "connexion":
+                getLoginController();
+                break;
+            case "deconnexion":
+                session_destroy();
+                break;
             default:
-                echo \Helpers\getRenderer()->render("homepage.html");
+                getHomepageController();
                 break;
     } else {
-        echo \Helpers\getRenderer()->render("homepage.html");
+        getHomepageController();
 
     }
 }

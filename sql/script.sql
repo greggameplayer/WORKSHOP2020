@@ -12,7 +12,7 @@ CREATE TABLE categorie(
    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
    nom VARCHAR(50),
    consommation DECIMAL(15,2),
-   utilisationHebdo INT 
+   utilisationHebdo INT
 )ENGINE=INNODB;
 
 CREATE TABLE produitAlternative(
@@ -34,7 +34,7 @@ CREATE TABLE possession (
     FOREIGN KEY(idCategorie) REFERENCES categorie(id)
 )ENGINE=INNODB;
 
-INSERT INTO categorie (nom, consommation, utilisationHebdo)
+INSERT INTO produit (nom, consommation, utilisationHebdo)
 VALUES
 ('Congélateur', 350, 168),
 ('Réfrigérateur', 200, 168),
