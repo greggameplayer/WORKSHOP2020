@@ -9,7 +9,7 @@ use function Helpers\getRenderer;
 function getHomepageController(){
     if(isset($_SESSION["id"]) && isset($_SESSION["failed"]) && $_SESSION["failed"] == false){
         $twig = getRenderer();
-        echo $twig->render('homepage.html', ["Session" => $_SESSION["id"]]);
+        echo $twig->render('homepage.html', ["Session" => $_SESSION["id"], "Scores" => \Models\getScores($_SESSION["id"])]);
     }else if(isset($_SESSION["failed"]) && ($_SESSION["failed"] == "mdp" || $_SESSION["failed"] == "user")){
         $twig = getRenderer();
         if ($_SESSION["failed"] == "mdp") {

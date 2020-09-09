@@ -22,6 +22,7 @@
             "app/helpers/database.helper.php",
             "app/models/inscription.model.php",
             "app/models/login.model.php",
+            "app/models/score.model.php",
             "app/helpers/renderer.helper.php"
         ]
     }

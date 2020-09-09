@@ -112,7 +112,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Micro-Ondes</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores["Four micro-ondes"]}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -128,7 +130,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Ordinateur</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores.Ordinateur}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -144,7 +148,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Lave-Linge</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores["Lave-linge"]}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -160,7 +166,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Congélateur</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores.congelateur}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -176,7 +184,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0 ">Réfrigirateur</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores.refrigerateur}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -192,7 +202,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Four</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores["Four classique"]}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -208,7 +220,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Ampoules</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores.Ampoules}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -224,7 +238,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Télévision</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores["Television LCD"]}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -240,7 +256,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Lave-vaisselle</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores["Lave-vaisselle"]}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -256,7 +274,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Aspirateur</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores.Aspirateur}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -272,7 +292,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Sèche Linge</h5>
-                  <p>Score : </p>
+                  {% if Session is defined %}
+                  <p>Score : {{Scores["seche-linge"]}}</p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -280,6 +302,23 @@
         </div>
       </div>
 
+      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;cleaning&quot;]">
+        <div class="position-relative inner-box">
+          <div class="image position-relative parentImg">
+            <img src="images/appareils/boss.png" alt="portfolio-image" class="img-fluid w-75 d-block">
+            <div class="overlay-box">
+              <div class="overlay-inner">
+                <a class="overlay-content" href="portfolio-single.html">
+                  <h5 class="mb-0">Utilisateur</h5>
+                  {% if Session is defined %}
+                  <p>Score : </p>
+                  {% endif %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </div>
