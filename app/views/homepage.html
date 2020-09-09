@@ -84,7 +84,7 @@
       </div>
     </div>
 
-    
+
 
     <div class="row shuffle-wrapper portfolio-gallery">
 
@@ -96,7 +96,9 @@
               <div class="overlay-inner">
                 <a class="overlay-content">
                   <h5 class="mb-0">Utilisateur</h5>
+                  {% if Session is defined %}
                   <p>Score : </p>
+                  {% endif %}
                 </a>
               </div>
             </div>
@@ -294,24 +296,6 @@
                   <h5 class="mb-0">Sèche Linge</h5>
                   {% if Session is defined %}
                   <p>Score : {{Scores["seche-linge"]}}</p>
-                  {% endif %}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[&quot;cleaning&quot;]">
-        <div class="position-relative inner-box">
-          <div class="image position-relative parentImg">
-            <img src="images/appareils/boss.png" alt="portfolio-image" class="img-fluid w-75 d-block">
-            <div class="overlay-box">
-              <div class="overlay-inner">
-                <a class="overlay-content" href="portfolio-single.html">
-                  <h5 class="mb-0">Utilisateur</h5>
-                  {% if Session is defined %}
-                  <p>Score : </p>
                   {% endif %}
                 </a>
               </div>
