@@ -826,4 +826,13 @@ textarea.form-control {
     width: 150px;
 }
 
+.parentImg {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+
+
 /*# sourceMappingURL=maps/style.css.map */
