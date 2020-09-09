@@ -3,6 +3,8 @@ $("document").ready(function (){
     $("#inscriptionbutton").on("click", onClickInscriptionButton);
     $("#dropdownformheader").on("submit", onSubmitConnexion)
     $("#deconnexionbt").on("click", onClickDeconnexion);
+    $("#passwordinscription").on("keyup", onChangeResetBorder);
+    $("#confirmPassword").on("keyup", onChangeResetBorder);
 });
 
 function onSubmitConnexion(event){
@@ -33,6 +35,12 @@ function onClickInscriptionButton(_event){
 
 function onSubmitInscriptionForm(event){
     event.preventDefault();
+    if ($("#passwordinscription").val() != $("#confirmPassword").val()){
+        document.getElementById("confirmPassword").setCustomValidity("Les mot de passes ne sont pas identique !");
+        $("#confirmPassword").css("border","solid red");
+        $("#passwordinscription").css("border", "solid red");
+        return;
+    }
     $.post("./index.php", {page: "inscription.model", Email: $("#usernameinscription").val(), Password: $("#passwordinscription").val()}, function(results){
         $("#submitinscription").prop("disabled", true);
         $.post("./index.php", {
@@ -47,18 +55,7 @@ function onSubmitInscriptionForm(event){
     });
 }
 
-function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
+function onChangeResetBorder(){
+    $("#confirmPassword").css("border","");
+    $("#passwordinscription").css("border", "");
 }
