@@ -27,12 +27,12 @@ CREATE TABLE possession (
     idUtilisateur INT,
     idCategorie INT,
     score DECIMAL(15, 2),
-    PRIMARY KEY(idUtilisateur, idProduit),
+    PRIMARY KEY(idUtilisateur, idCategorie),
     FOREIGN KEY(idUtilisateur) REFERENCES utilisateur(id),
     FOREIGN KEY(idCategorie) REFERENCES categorie(id)
 )ENGINE=INNODB;
 
-INSERT INTO produit (nom, consomation, utilisationHebdo)
+INSERT INTO categorie (nom, consommation, utilisationHebdo)
 VALUES
 ('Congélateur', 350, 168),
 ('Réfrigérateur', 200, 168),
