@@ -1,4 +1,5 @@
-CREATE DATABASE workshop 
+CREATE DATABASE workshop;
+use workshop;
 
 CREATE TABLE utilisateur(
    id INT PRIMARY KEY  AUTO_INCREMENT,
@@ -10,7 +11,7 @@ CREATE TABLE categorie(
    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
    nom VARCHAR(50),
    consommation DECIMAL(15,2),
-   utilisationHebdo INT 
+   utilisationHebdo INT
 )ENGINE=INNODB;
 
 CREATE TABLE produitAlternative(
@@ -27,12 +28,12 @@ CREATE TABLE possession (
     idUtilisateur INT,
     idCategorie INT,
     score DECIMAL(15, 2),
-    PRIMARY KEY(idUtilisateur, idProduit),
+    PRIMARY KEY(idUtilisateur, idCategorie),
     FOREIGN KEY(idUtilisateur) REFERENCES utilisateur(id),
     FOREIGN KEY(idCategorie) REFERENCES categorie(id)
 )ENGINE=INNODB;
 
-INSERT INTO produit (nom, consomation, utilisationHebdo)
+INSERT INTO categorie (nom, consommation, utilisationHebdo)
 VALUES
 ('Congélateur', 350, 168),
 ('Réfrigérateur', 200, 168),
@@ -54,7 +55,7 @@ VALUES
 
 
 INSERT INTO produitAlternative(nom, consommation, utilisationHebdomadaire, idCategorie)
-VALUES 
+VALUES
 ('Congélateur armoire Bosch GSV33VWEV', 204, 168, 1),
 ('WHIRLPOOL W7821OOX',204,168,2),
 (' ELECTROLUX EW7H4802SC', 309, 12, 3),
