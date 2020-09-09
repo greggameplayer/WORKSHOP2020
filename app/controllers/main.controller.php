@@ -11,6 +11,9 @@ function getMainController()
             case 'inscription':
                 getInscriptionController();
                 break;
+            case 'accueil':
+                getHomepageController();
+                break;
             case 'questionnaire':
                 if(isset($_SESSION["id"])) {
                     echo \Helpers\getRenderer()->render("questionnaire.html", ["Session" => $_SESSION["id"]]);
