@@ -92,7 +92,7 @@ function ending(){
             testeMedianePower=1;
         };
         if(testeMedianePower==1&&testeMedianeTime==1){
-            endInfo[this.parentNode.parentNode.parentNode.children[0].id].push(medianeTime*medianePower/1000);
+            endInfo[this.parentNode.parentNode.parentNode.children[0].id].push(medianeTime*medianePower*52/1000);
             testeMedianeTime=0;
             testeMedianePower=0;
         }
