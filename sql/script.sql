@@ -35,14 +35,14 @@ CREATE TABLE possession (
 
 INSERT INTO categorie (nom, consommation, utilisationHebdo)
 VALUES
-('Congélateur', 350, 168),
-('Réfrigérateur', 200, 168),
-('Sèche-linge', 900, 12),
+('congelateur', 350, 168),
+('refrigerateur', 200, 168),
+('seche-linge', 900, 12),
 ('Lave-vaisselle', 625, 10),
 ('Lave-linge', 1150, 10),
-('Télévision LCD', 110, 21),
+('Television LCD', 110, 21),
 ('Aspirateur', 150, 2),
-('Chargeur de téléphone', 2, 7),
+('Chargeur de telephone', 2, 7),
 ('Ordinateur', 1100, 100),
 ('Four micro-ondes', 40, 1),
 ('Four classique', 365, 4),
