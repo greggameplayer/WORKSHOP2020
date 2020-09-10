@@ -35,14 +35,14 @@ CREATE TABLE possession (
 
 INSERT INTO categorie (nom, consommation, utilisationHebdo)
 VALUES
-('Congélateur', 350, 168),
-('Réfrigérateur', 200, 168),
-('Sèche-linge', 900, 12),
+('congelateur', 350, 168),
+('refrigerateur', 200, 168),
+('seche-linge', 900, 12),
 ('Lave-vaisselle', 625, 10),
 ('Lave-linge', 1150, 10),
-('Télévision LCD', 110, 21),
+('Television LCD', 110, 21),
 ('Aspirateur', 150, 2),
-('Chargeur de téléphone', 2, 7),
+('Chargeur de telephone', 2, 7),
 ('Ordinateur', 1100, 100),
 ('Four micro-ondes', 40, 1),
 ('Four classique', 365, 4),
@@ -56,14 +56,14 @@ VALUES
 
 INSERT INTO produitAlternative(nom, consommation, utilisationHebdomadaire, idCategorie)
 VALUES
-('Congélateur armoire Bosch GSV33VWEV', 204, 168, 1),
+('Bosch GSV33VWEV', 204, 168, 1),
 ('WHIRLPOOL W7821OOX',204,168,2),
-(' ELECTROLUX EW7H4802SC', 309, 12, 3),
+('ELECTROLUX EW7H4802SC', 309, 12, 3),
 ('Essentielb ELV-442b', 262, 12, 4),
 ('INDESIT BTWCA51052',148,10,5),
 ('Toshiba U2963DG',96,21,6),
 ('Essentielb EAS 73 HARDFLOOR',23,2,7),
-('ULTRA-PORTABLE WHY! N240WU 14',750,100,9),
+('ULTRA-PORTABLE N240WU 14',750,100,9),
 ('PROLINE SM22',25,2,10),
 ('Whirlpool EX AKZ9626IX',204,4,11),
-('Ampoule Philips LED 6,7 Watt E27',7,5,13);
+('Philips Watt E27',7,5,13);

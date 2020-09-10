@@ -431,7 +431,7 @@ ul.dropdown-menu > li > a:hover, .navbar ul ul ul.dropdown-menu li .nav-link:hov
     opacity: 0;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
-    background-color: rgba(47, 50, 56, 0.8);
+    background-color: rgba(47, 50, 56, 0.2);
 }
 
 .inner-box:hover .image img {
