@@ -56,14 +56,14 @@ VALUES
 
 INSERT INTO produitAlternative(nom, consommation, utilisationHebdomadaire, idCategorie)
 VALUES
-('Congélateur armoire Bosch GSV33VWEV', 204, 168, 1),
+('Bosch GSV33VWEV', 204, 168, 1),
 ('WHIRLPOOL W7821OOX',204,168,2),
-(' ELECTROLUX EW7H4802SC', 309, 12, 3),
+('ELECTROLUX EW7H4802SC', 309, 12, 3),
 ('Essentielb ELV-442b', 262, 12, 4),
 ('INDESIT BTWCA51052',148,10,5),
 ('Toshiba U2963DG',96,21,6),
 ('Essentielb EAS 73 HARDFLOOR',23,2,7),
-('ULTRA-PORTABLE WHY! N240WU 14',750,100,9),
+('ULTRA-PORTABLE N240WU 14',750,100,9),
 ('PROLINE SM22',25,2,10),
 ('Whirlpool EX AKZ9626IX',204,4,11),
-('Ampoule Philips LED 6,7 Watt E27',7,5,13);
+('Philips Watt E27',7,5,13);
