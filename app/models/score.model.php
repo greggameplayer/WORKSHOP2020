@@ -18,8 +18,8 @@ function getScores($IdUser){
         "Ampoules basses consoles" => "inconnu",
         "Utilisateur" => "inconnu"
     ];
-    $q = \Helpers\getDatabaseConnection()->prepare("SELECT categorie.nom, possession.score FROM possession, categorie, utilisateur WHERE possession.idUtilisateur = utilisateur.id and possession.idCategorie = categorie.id and possession.idUtilisateur = :id");
-    $req = \Helpers\getDatabaseConnection()->prepare('SELECT ROUND(AVG(score), 2) from possession where possession.idUtilisateur = :id');
+    $q = \Helpers\getDatabaseConnection()->prepare("SELECT categorie.nom, possession.score, categorie.consommation FROM possession, categorie, utilisateur WHERE possession.idUtilisateur = utilisateur.id and possession.idCategorie = categorie.id and possession.idUtilisateur = :id");
+    $req = \Helpers\getDatabaseConnection()->prepare('SELECT ROUND(AVG(10 - possession.score/ categorie.consommation), 2) from possession, categorie where possession.idUtilisateur = :id and possession.idCategorie = categorie.id');
     $q->execute([
         "id" => $IdUser
     ]);
@@ -28,7 +28,7 @@ function getScores($IdUser){
     ]);
     $tab = $q->fetchAll();
     for ($i = 0; $i < count($tab); $i++){
-        $result[$tab[$i]["nom"]] = $tab[$i]["score"];
+        $result[$tab[$i]["nom"]] = round(10 - ($tab[$i]["score"]/$tab[$i]["consommation"]), 2);
     }
     $result["Utilisateur"] = $req->fetch()[0];
     return $result;

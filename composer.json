@@ -19,6 +19,7 @@
             "app/controllers/homepage.controller.php",
             "app/controllers/login.controller.php",
             "app/controllers/inscription.controller.php",
+            "app/models/consumption.model.php",
             "app/helpers/database.helper.php",
             "app/models/inscription.model.php",
             "app/models/login.model.php",

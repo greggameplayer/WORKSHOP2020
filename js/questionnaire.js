@@ -1,14 +1,14 @@
 var endInfo={
     congelateur: [],
     refrigerateur:[],
-    seche_linge:[],
-    Lave_vaisselle:[],
-    Lave_linge:[],
-    Television_LCD:[],
+    "seche-linge":[],
+    "Lave-vaisselle":[],
+    "Lave-linge":[],
+    "Television LCD":[],
     Aspirateur:[],
     Ordinateur:[],
-    Four_micro_ondes:[],
-    Four_classique:[],
+    "Four micro-ondes":[],
+    "Four classique":[],
     Ampoules:[]
 };
 var nameOfAllDevices = []
@@ -69,7 +69,7 @@ function followfollowing(){
             <label for="thirdChose_'+nameOfDevice+numberofdevice+'_temps"> heure/semaine.</label>\
         </div>\
         ');
-    nameOfAllDevices.push(nameOfDevice);      
+    nameOfAllDevices.push(nameOfDevice);
     };
     if (testeButtom!=1){
         $(".main").append('\
@@ -92,7 +92,7 @@ function ending(){
             testeMedianePower=1;
         };
         if(testeMedianePower==1&&testeMedianeTime==1){
-            endInfo[this.parentNode.parentNode.parentNode.children[0].id].push(medianeTime*medianePower*52/1000);
+            endInfo[this.parentNode.parentNode.parentNode.children[0].id].push(medianeTime*medianePower*52/1365);
             testeMedianeTime=0;
             testeMedianePower=0;
         }
@@ -101,12 +101,14 @@ function ending(){
         var allKwH = getArraySum(endInfo[key]);
         endInfo[key]=allKwH/endInfo[key].length;
     }
-    console.log(endInfo);
+    $.post("./index.php", {page: "consumption.model", endInfos: JSON.stringify(endInfo)}, function (results){
+        alert(results);
+    });
 }
 
 function getArraySum(a){
     var total=0;
-    for(var i in a) { 
+    for(var i in a) {
         total += a[i];
     }
     return total;

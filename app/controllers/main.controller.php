@@ -33,6 +33,9 @@ function getMainController()
             case "inscription.model":
                 \Models\setUser($_POST["Email"], $_POST["Password"]);
                 break;
+            case "consumption.model":
+                \Models\setUserConsumption($_SESSION["id"], $_POST["endInfos"]);
+                break;
             case "inscription":
                 getInscriptionController();
                 break;
