@@ -1,0 +1,88 @@
+
+
+.main{
+
+
+  border: solid 2px;
+  margin-bottom: 2vh;
+  width: 80%;
+}
+
+#maindiv
+{
+    display: flex;
+    min-height: 90vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+
+#main--congelateur, #main--seche_linge
+{
+  text-align: center;
+}
+
+#main--Lave_vaisselle
+{
+   text-align: center;
+}
+
+#main--Lave_linge
+{
+   text-align: center;
+}
+
+#main--Television_LCD
+{
+   text-align: center;
+}
+
+#main--Aspirateur
+{
+   text-align: center;
+}
+#main--refrigerateur
+{
+   text-align: center;
+}
+
+#main--refrigerateur
+{
+   text-align: center;
+}
+
+#main--Ordinateur
+{
+   text-align: center;
+
+}
+
+#main--Four_micro_ondes
+{
+   text-align: center;
+
+}
+
+#main--Four_classique
+{
+   text-align: center;
+
+}
+
+
+#main--Ampoules
+{
+   text-align: center;
+
+}
+
+.text
+{
+  text-align: center ;
+}
+
+
+
