@@ -22,7 +22,7 @@ CREATE TABLE produitAlternative(
    idCategorie INT NOT NULL,
    PRIMARY KEY(id),
    FOREIGN KEY(idCategorie) REFERENCES categorie(id)
-);
+)ENGINE=INNODB;
 
 CREATE TABLE possession (
     idUtilisateur INT,
