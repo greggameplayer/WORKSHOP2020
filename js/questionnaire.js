@@ -103,6 +103,10 @@ function ending(){
     }
     $.post("./index.php", {page: "consumption.model", endInfos: JSON.stringify(endInfo)}, function (results){
         alert(results);
+        $.post("./index.php", {}, function (results){
+           $("body").html(results);
+           window.location.replace('/workshop');
+        });
     });
 }
 
