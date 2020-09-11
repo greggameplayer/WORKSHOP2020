@@ -1,11 +1,30 @@
 
 
-.main{
+.main
+{
+    border: solid 2px #5ABD7F;
+    margin-bottom: 2vh;
+    width: 90vw;
+    border-radius: 5vh;
+    box-shadow: black 6px 5px 5px;
+    display: flex;
+    flex-direction: column;
+}
 
+.wrapperquest {
+    border-radius: 5vh;
+    box-shadow: black 6px 5px 5px;
+    border: solid 2px #5ABD7F;
+    padding: 0.5vh;
+    width: 80vw;
+    margin:auto;
+    margin-bottom: 1vh;
+}
 
-  border: solid 2px;
-  margin-bottom: 2vh;
-  width: 80%;
+.choicequest input[type='number'] {
+    border-radius: 5vh;
+    border: solid 2px #5ABD7F;
+    -moz-outline-radius: 5vh;
 }
 
 #maindiv
@@ -19,69 +38,24 @@
     margin-top: 1vh;
 }
 
-
-#main--congelateur, #main--seche_linge
+.choicequest label
 {
-  text-align: center;
-}
-
-#main--Lave_vaisselle
-{
-   text-align: center;
-}
-
-#main--Lave_linge
-{
-   text-align: center;
-}
-
-#main--Television_LCD
-{
-   text-align: center;
-}
-
-#main--Aspirateur
-{
-   text-align: center;
-}
-#main--refrigerateur
-{
-   text-align: center;
-}
-
-#main--refrigerateur
-{
-   text-align: center;
-}
-
-#main--Ordinateur
-{
-   text-align: center;
-
-}
-
-#main--Four_micro_ondes
-{
-   text-align: center;
-
-}
-
-#main--Four_classique
-{
-   text-align: center;
-
-}
-
-
-#main--Ampoules
-{
-   text-align: center;
-
+    margin-left: 2vw;
 }
 
 .text
 {
   text-align: center ;
+}
+
+.choicequest {
+    text-align: center;
+}
+
+#end {
+    align-self: center;
+    width: 15vw;
+    margin-bottom: 2vh;
 }
 
 

@@ -7,52 +7,54 @@
         <link href="css/questionnaire.css" rel="stylesheet">
         <script src="js/questionnaire.js" defer></script>
     <body>
+    <div id="maindiv">
         <div class="text">Entrez les appareils présent chez vous, avec leurs spécificités:</div>
         <div class="main">
-            <div id="main--congelateur">
+            <div id="main--congelateur" class="choicequest">
                 <input type="checkbox" class="firstChose" id="congelateur" name="Congélateur">
                 <label for="congelateur">Congélateur</label>
             </div>
-            <div id="main--refrigerateur">
+            <div id="main--refrigerateur" class="choicequest">
                 <input type="checkbox" class="firstChose" id="refrigerateur" name="Réfrigérateur">
                 <label for="refrigerateur">Réfrigérateur</label>
             </div>
-            <div id="main--seche-linge">
+            <div id="main--seche-linge" class="choicequest">
                 <input type="checkbox" class="firstChose" id="seche-linge" name="Sèche-linge">
                 <label for="seche-linge">Sèche-linge</label>
             </div>
-            <div id="main--Lave-vaisselle">
+            <div id="main--Lave-vaisselle" class="choicequest">
                 <input type="checkbox" class="firstChose" id="Lave-vaisselle" name="Lave-vaisselle">
                 <label for="Lave-vaisselle">Lave-vaisselle</label>
             </div>
-            <div id="main--Lave-linge">
+            <div id="main--Lave-linge" class="choicequest">
                 <input type="checkbox" class="firstChose" id="Lave-linge" name="Lave-linge">
                 <label for="Lave-linge">Lave-linge</label>
             </div>
-            <div id="main--Television LCD">
-                <input type="checkbox" class="firstChose" id="Television LCD" name="Télévision_LCD">
+            <div id="main--Television LCD" class="choicequest">
+                <input type="checkbox" class="firstChose" id="Television LCD" name="Television LCD">
                 <label for="Television LCD">Télévision LCD</label>
             </div>
-            <div id="main--Aspirateur">
+            <div id="main--Aspirateur" class="choicequest">
                 <input type="checkbox" class="firstChose" id="Aspirateur" name="Aspirateur">
                 <label for="Aspirateur">Aspirateur</label>
             </div>
-            <div id="main--Ordinateur">
+            <div id="main--Ordinateur" class="choicequest">
                 <input type="checkbox" class="firstChose" id="Ordinateur" name="Ordinateur">
                 <label for="Ordinateur">Ordinateur</label>
             </div>
-            <div id="main--Four micro-ondes">
-                <input type="checkbox" class="firstChose" id="Four micro-ondes" name="Four_micro-ondes">
+            <div id="main--Four micro-ondes" class="choicequest">
+                <input type="checkbox" class="firstChose" id="Four micro-ondes" name="Four micro-ondes">
                 <label for="Four micro-ondes">Four micro-ondes</label>
             </div>
-            <div id="main--Four classique">
-                <input type="checkbox" class="firstChose" id="Four classique" name="Four_classique">
+            <div id="main--Four classique" class="choicequest">
+                <input type="checkbox" class="firstChose" id="Four classique" name="Four classique">
                 <label for="Four classique">Four classique</label>
             </div>
-            <div id="main--Ampoules">
+            <div id="main--Ampoules" class="choicequest">
                 <input type="checkbox" class="firstChose" id="Ampoules" name="Ampoules">
                 <label for="Ampoules">Ampoules</label>
             </div>
         </div>
+    </div>
     </body>
 {% endblock %}

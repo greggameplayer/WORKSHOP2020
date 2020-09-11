@@ -21,19 +21,19 @@ $("document").ready(function(){
 });
 
 function following(){
-    if ($("#"+this.id).prop('checked')){
-        $("#main--"+this.id).append('\
-        <div id="wrapper--'+this.id+'">\
+    if ($("[id='" + this.id + "']").prop('checked')){
+        $("[id='main--"+this.id+ "']").append('\
+        <div id="wrapper--'+this.id+'" class="wrapperquest">\
             <label for="secondChose_'+this.id+'">Entrez le nombre de '+this.id+'(s) que vous possédez:</label>\
             <input type="number" class="secondChose" id="secondChose_'+this.id+'" step="1"  min="1" max="20" required>\
             <br>\
-            <input type="button" id="valider'+this.id+'" value="Valider">\
+            <input type="button" id="valider'+this.id+'" value="Valider" class="btn btn-color">\
         </div>\
         ');
         varchecked+=1;
-        $("#valider"+this.id).on("click",followfollowing);
+        $("[id='valider"+this.id+"']").on("click",followfollowing);
     }else{
-        $("#wrapper--"+this.id).remove();
+        $("[id='wrapper--"+this.id+"']").remove();
         varchecked-=1;
         let deleteDevice = this.id;
         for(let i = 0 ; i<nameOfAllDevices.length ; i++){
@@ -54,12 +54,12 @@ function following(){
 function followfollowing(){
     numberofdevice=0;
     nameOfDevice=this.parentNode.parentNode.children[0].id;
-    ocurences=$("#secondChose_"+nameOfDevice).val();
-    $("#wrapper--"+nameOfDevice).html('\
+    ocurences=$("[id='secondChose_"+nameOfDevice+"']").val();
+    $("[id='wrapper--"+nameOfDevice+"']").html('\
         ');
     while (ocurences>numberofdevice){
         numberofdevice +=1;
-        $("#wrapper--"+nameOfDevice).append('\
+        $("[id='wrapper--"+nameOfDevice+"']").append('\
         <div class="underwrapper--'+nameOfDevice+'_'+numberofdevice+'">\
             <label for="thirdChose_'+nameOfDevice+numberofdevice+'_puissance"> La puissance de mon '+nameOfDevice+' n°'+numberofdevice+' est de </label>\
             <input type="number" class="thirdChose" id="thirdChose_'+nameOfDevice+'_'+numberofdevice+'_puissance" min="1" max="10000" required>\
@@ -73,7 +73,7 @@ function followfollowing(){
     };
     if (testeButtom!=1){
         $(".main").append('\
-        <input type="button" id="end" value="Confirmer">\
+        <input type="button" id="end" value="Confirmer" class="btn btn-color">\
             ');
         $("#end").on("click",ending);
         testeButtom=1;
